@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+/* Standards */
+    @font-face {
+    font-family: "proxima_nova";
+    src: url("styles/fonts/ProximaNova-RegWeb.woff") format("woff");
+    }
+    @font-face {
+    font-family: "proxima_nova_bold";
+    src: url("styles/fonts/ProximaNova-BoldWeb.woff") format("woff");
+    }
+
+    @font-face {
+    font-family: "proxima_nova_EC_Reg";
+    src: url("styles/fonts/ProximaNovaExCn-RegWeb.woff") format("woff");
+    }
+    @font-face {
+    font-family: "proxima_nova_EC_Black";
+    src: url("styles/fonts/ProximaNovaExCn-BlackWeb.woff") format("woff");
+    }
+       /* FOUNDATIONAL ITEMS */
+    @font-face {
+      font-family:  "proxima_nova_bold";
+        src: url("/styles/fonts/ProximaNova-BoldWeb.woff") format("woff");
+    }
+    @font-face {
+      font-family:  "proxima_nova";
+        src: url("/styles/fonts/ProximaNova-RegWeb.woff") format("woff");
+    }
+    a.links{
+    text-decoration: underline;
+    color:#e21b23;
+    }
+    .TopButton{
+    display:block;
+    width:20%;
+    background-color: #e21b23;
+    padding:0.8em;
+    text-align:center;
+    font-family: "proxima_nova_bold", verdana, helvetica, sans-serif;
+    font-size: 1.4em;
+    color:#fff;
+    margin:1em auto;
+    border-radius: 5px;
+    letter-spacing: .08em;
+    }
+    a.noLink{
+    text-decoration: underline;
+    color:#fff;
+    }
+    .content_contain{
+    width:90%;
+    display:block;
+    margin:0 auto;
+    }
+    .ah1_2{
+        font-family: "proxima_nova_bold", verdana, helvetica, sans-serif;
+        font-size:2em;
+        color:#00184a;
+        padding:1.5em 0;
+    line-height:1em;
+
+    }
+    .ah2_2{
+        font-family: "proxima_nova", verdana, helvetica, sans-serif;
+        font-size:1.5em;
+        color:#333;
+        padding:0 0 1.5em 1.5em;
+        line-height: 1.4em;
+
+    }
+    .section_contain {
+    background-color: #F9F9F9;
+    border: 2px solid #E21B23;
+    display: block;
+    font-family: "proxima_nova_bold",verdana,helvetica,sans-serif;
+    font-size: 1.7em;
+    height: auto;
+    margin: 0 auto;
+    padding: 1.5em;
+    width: 50%;
+    }
+    .stripes {
+    width:100%;
+    background-image:url('http://www.totalhockey.com/ui/stripe_2a1.png');
+    background-repeat:repeat;
+    height:30px;
+    margin:2em 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    }
+    .faq{
+    padding:.5em 10px;
+    }
+    .faq:nth-child(even){
+    background-color: #F1F1F1;
+    padding:1em 10px;
+    }
+    body{
+    overflow-x: hidden;
+    }
+    .link_style{
+    text-decoration: none;
+    }
+    .link_style:hover{
+    text-decoration: none;
+    }
+    iframe.iframe_mobile{
+    margin:0 auto;
+    display: block;
+    position:relative;
+    height:500px;
+    width:50%;
+    }
+    .frame_contain{
+    width:100%;
+    position:relative;
+    margin:0 auto;
+    display:block;
+
+    }
+    .hero_cta_2{
+    color:#fff;
+    border-radius: 5px;
+    margin: 0 auto 1em auto;
+    background: #ab162b;
+    display: block;
+    font-family: "proxima_nova_EC_Reg",verdana,helvetica,sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 0.09em;
+    line-height: 16px;
+    padding: 0.6em 1em;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 180px;
+    }
+    a.hero_cta_2{
+    color:#fff;
+    }
+    .hero_red{
+    background-color: #e21b23;
+    color: #ffffff;
+    }
+    .hero_white{
+    background-color: #ffffff;
+    color: #e21b23;
+
+    }
+    /*  Margin Spacers for individual content   */
+    .spacer_top{margin-top:20px;}
+    .spacer_right{margin-right: 20px;}
+    .spacer_bottom{margin-bottom: 20px;}
+    .spacer_left{margin-left: 20px;}
+    /* reset column margin */
+    .column_b, .column_c {
+    overflow: hidden;
+    float: left; 
+    display: inline;
+    box-sizing:border-box;
+    }
+    .image_content{
+    position:relative;
+    width:100%;
+    }
+    .standard_copy{
+    font-size: 1.2em;
+    }
+    #margintop{
+    margin-top:4em;
+    }
+    /* Height's for content various content boxes */
+    .xsm_h{
+    height:235px;
+    }
+    .sm_h{
+    height:auto;
+    }
+    .lg_h{
+    height:660px;
+    }
+    .head_h{
+    height:270px;
+    }
+    .svg_logo{
+    height:100px;
+    width:100px;
+    display:block;
+    position: relative;
+    padding:0.5em 0;
+    margin:0 auto;
+    }
+    .sizing_btn{
+    width:70%;
+    margin:0.5em auto;
+    text-align: center;
+    display:block;
+    position:relative;
+    color:#e21b23;
+    }
+    .sizing_btn:after{
+    content:url(/ui/pop_out_info.svg);
+    display: inline-block;
+    position: relative;
+    top:1px;
+    }
+    .TopButton {
+    background-color: #e21b23;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-family: "proxima_nova_bold",verdana,helvetica,sans-serif;
+    font-size: 1.4em;
+    letter-spacing: 0.08em;
+    margin: 1em auto;
+    padding: 0.8em;
+    text-align: center;
+    width: 20%;
+    height:auto;
+    }
+    .TopButton:hover{
+    background-color: #9e1318;
+    border-color:white;
+    border-style: solid;
+    }
+    .clearIt{
+    clear:both;
+    }
+    .TopButton:after{
+    content:url(/ui/white_cta.png);
+    display: inline-block;
+    position: relative;
+    top:1px;
+    }
+    .hero_cta_1{
+    background-color: #e21b23;
+    border-radius: 1px;
+    bottom: 37px;
+    color: #ffffff;
+    display: block;
+    font-family: "proxima_nova",verdana,helvetica,sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 0.09em;
+    line-height: 13px;
+    padding: 0.6em 1em;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 160px;
+    }
+    .title_card, .sub_title{
+
+    letter-spacing: 0.09em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffc937;
+    text-shadow: 3px 3px 0px rgba(0, 24, 74, 1);
+    }
+    .title_card{
+    font-family: "proxima_nova_EC_Black",verdana,helvetica,sans-serif;
+    font-size: 7em;
+    margin:0 auto;
+    padding:30px 0;
+    line-height: 0.8em;
+    background: url('/ui/FS_gradation_2014.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width:100%;
+    height:100%;
+    }
+    .sub_title{
+    font-family: "proxima_nova_EC_Reg",verdana,helvetica,sans-serif;
+    font-size: 1.9rem;
+    margin:1em auto 0 auto;
+    }
+    .hero_title{
+    color: #414042;
+    font-family: "proxima_nova_boldit",verdana,helvetica,sans-serif;
+    font-size: 4em;
+    letter-spacing: 0.09em;
+    text-align: center;
+    margin:1em;
+    }
+    .ah1 {
+    color: #fff;
+    font-family: "proxima_nova",verdana,helvetica,sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 0.01em;
+    line-height: 1.2em;
+    text-align: center;
+    margin:0 0 2em 0;
+    }
+    span.codes{
+    background-color: #e21b23;
+    color:#fff;
+    padding:0 0.3em;
+    }
+    .bg_pattern{
+    background-image: url('/ui/THS_2015_STL_LittleBlues.png'), url('/ui/tileable_wood_texture_LB.jpg');
+    background-position:center bottom, center;
+    background-repeat: no-repeat, repeat;
+    margin:0;
+    padding:0 0 2em 0;
+    }
+    span.legal{
+    letter-spacing: 0.04em;
+    font-family: "proxima_nova",verdana,helvetica,sans-serif;
+    font-size: 9px;
+    color:#fff;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    text-transform: none;
+    padding:0;
+    line-height: 0.4em;
+    }
+    p.agenda_time{
+    color: #fff;
+    font-family: "proxima_nova",verdana,helvetica,sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    }
+    p.agenda_time:nth-child(2n){
+    font-family: "proxima_nova_EC_Reg",verdana,helvetica,sans-serif;
+    font-size: 1.3rem;
+    line-height: 1em;
+    padding:0.5em;
+    border-bottom: 3px solid #fff;
+    }
+    .hero_logo{
+    width:215px;
+    height:215px;
+    margin:0 auto;
+    text-align: center;
+    padding:1em;
+    display:block;
+    position:relative;
+    }
+    .shadow{
+    -webkit-box-shadow: inset 0px 0px 95px 13px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 95px 13px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 95px 13px rgba(0,0,0,0.75);
+
+    }
+    .seperate{
+
+    background: url('/ui/THS_2015_STL_LittleBlues.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    }
+    @media screen and (min-width: 1020px){
+    .column{
+    margin:0;
+    }
+    }
+    /* MEDIUM */
+    @media screen and (min-width: 768px) and (max-width: 1019px) {
+    html, body { /* prevents horizontal scroll */
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+    .agenda_dt img{
+    width:100%;
+    }
+    .spacer_top{margin-top:15px;}
+    .spacer_right{margin-right: 15px;}
+    .spacer_bottom{margin-bottom: 15px;}
+    .spacer_left{margin-left: 15px;}
+    .hero{
+    top:5%;
+    }
+    .hero_short{
+    font-size: 2.5em;
+    padding: 1em 0 0;
+    }
+    .sm_h{
+    height:auto;
+    float:left;
+    }
+    .lg_h{
+    height:482px;
+    float:left;
+    }
+    .xsm_h{
+    height:172px;
+    }
+    .overlay{
+    width:95%;
+    }
+    .category_wrap{
+    top:120px;
+    }
+    .title_card{
+    font-family: "proxima_nova_EC_Black",verdana,helvetica,sans-serif;
+    font-size: 7em;
+    margin:1em auto;
+    padding:0;
+    }
+
+    }
+    /* MEDIUM */
+    @media screen and (min-width: 768px) and (max-width: 1019px) {
+    .hero_title{
+    margin-top: 15px;
+    }
+    .THS_bg{
+    background-attachment: local;
+    background-color: #e21b23;
+    background-image: url("/ui/THS_2015_STL_mob.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:460px;
+    }
+    }
+    /* NARROW */
+
+    @media screen and (max-width: 768px){
+    html, body { /* prevents horizontal scroll */
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+    .ah1 {
+    font-size: 1.2em;
+    }
+    .ah2_2 {
+    font-family: "proxima_nova", verdana, helvetica, sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    padding: 0;
+    line-height: 1.4em;
+    width: 100%;
+    }
+    .hero_cta_2{
+    width:190px;
+    }
+    .hero_title{
+    font-size: 2.2em;
+    margin:1em 1em 0 1em;
+    padding: 0 0 1em;
+    line-height: 1.2em;
+    }
+    .title_card{
+    font-family: "proxima_nova_EC_Black",verdana,helvetica,sans-serif;
+    margin:1em auto;
+    padding:0;
+    }
+    .TopButton{
+    width:85%;
+    }
+    .spacer_top, .spacer_right, .spacer_bottom, .spacer_left{margin:0px;}
+    .column_b{
+    margin:10px 0;
+    width:100%;
+    overflow: hidden;
+    box-sizing:border-box
+    }
+    #margintop{
+    margin:0px;
+    }
+    .image_content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    }
+    .column_c {
+    margin-right: 3px;
+    margin-top: 2px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 48%;
+    }
+    .canvas{/* overides main style */
+    margin:0px;
+    }
+    .sm_h, .lg_h, .xsm_h, .head_h{
+    height:auto;
+    float:left;
+    text-align: center;
+    }
+    .title_card{
+    line-height: 1em;
+    font-size:4em;
+    margin:0;
+    }
+    .sub_title{
+    font-size: 1.5rem;
+    margin:1em auto 1em auto;
+    }
+    }
+    </style>
+
+    <title></title>
+</head>
+
+<body>
+    <div class="support-content bg_pattern shadow" style="margin-bottom:0px;">
+        <div class="row">
+            <div class="column grid_12">
+                <div class="grid_12 spacer_top column_b spacer_bottom sm_h">
+                    <img alt="" class="hero_logo" src=
+                    "/ui/LB_Logo_L_72015.svg">
+
+                    <div class="sub_title">
+                        &mdash; total hockey presents &mdash;
+                    </div>
+
+                    <div class="title_card">
+                        Little Blues<br>
+                        Equipment Fitting
+                    </div>
+
+                    <div class="ah1">
+                        Total Hockey is proud to help you start your child’s
+                        hockey career. To make their experience safe &
+                        enjoyable, it is important to have equipment that fits
+                        correctly. There are 600 kids participating in the MSP
+                        area, so we are using a reservation system to reduce
+                        wait times and provide more personalized service. Let’s
+                        get started!
+                    </div><a class="link_style" href=
+                    "https://total-hockey-little-wild.10to8.com">
+                    <div class="hero_cta_2" style=
+                    "background-color:#ffc937;color:#00184a;">
+                        register now
+                    </div></a>
+                </div>
+            </div><!-- column grid_12 close -->
+        </div><!-- .row close -->
+    </div><!-- support content -->
+
+    <div class="support-content" style=
+    "margin-bottom:0px;background-color:#e8e8e8;">
+        <div class="row">
+            <div class="content_contain">
+                <div class="ah1_2">
+                    What to expect
+                </div>
+
+                <div class="ah2_2">
+                    <ul>
+                        <li>A fitting takes about 30 minutes</li>
+
+                        <li>No walk-ups will be accepted</li>
+
+                        <li>Reservations are taken on a first come, first
+                        served basis</li>
+
+                        <li>If you have more than 1 player in the program, a
+                        separate reservation for each child needs to be
+                        made</li>
+
+                        <li>Items included are: Helmet, Shoulder pads, Gloves,
+                        Elbow pads, Breezers, Shin guards, Ice skates, Hockey
+                        socks, Hockey stick, Little Wild jersey, Equipment
+                        bag</li>
+
+                        <li>During your fitting, your skates will also be
+                        sharpened at no charge</li>
+
+                        <li>Additional items to consider purchasing – cloth
+                        &amp; plastic tape, mouthguard, skate soakers &amp; a
+                        skate towel <i>(Do we make this a bundle at a special
+                        price???)</i></li>
+                    </ul>
+                </div>
+
+                <div class="ah1_2">
+                    HOW TO SCHEDULE A FITTING APPOINTMENT
+                </div>
+
+                <div class="ah2_2">
+                    <ul>
+                        <li>Click on the link below</li>
+
+                        <li>Select “Equipment Fitting”</li>
+
+                        <li>Select “Book”</li>
+
+                        <li>Pick your preferred store location &amp; click on
+                        “See Slots”</li>
+
+                        <li>Scroll to the week containing your preferred
+                        date</li>
+
+                        <li>Choose a day &amp; time</li>
+
+                        <li>If your preferred time isn’t displayed, click on
+                        the “Store Associate” button at the top right and
+                        switch to the Store Associate 2 to see if their
+                        schedule is open at the time you desire</li>
+
+                        <li>If neither Associate is free for your desired time,
+                        you will need to select a different day, time or
+                        location</li>
+
+                        <li>Once you select a time, enter the name &amp; email
+                        used to register your Little Wild participant</li>
+
+                        <li>Review &amp; complete your booking</li>
+
+                        <li>You will receive a confirmation email immediately,
+                        as well as reminder notifications 3 days &amp; 1 day
+                        prior to your appointment</li>
+
+                        <li>That email also contains links to change or cancel
+                        your appointment, as well as add the appointment to
+                        your electronic calendar</li>
+                    </ul>
+                </div><a class="link_style" href=
+                "https://total-hockey-little-wild.10to8.com">
+                <div class="hero_cta_2" style="background-color:#00184a;">
+                    register now
+                </div></a>
+            </div><!-- content_contain -->
+        </div><!-- .row close -->
+    </div><!-- support content -->
+</body>
+</html>
